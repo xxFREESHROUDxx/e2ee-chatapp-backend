@@ -1,13 +1,33 @@
 # Real-Time Secure Chat Application using Web Sockets
  - The real-time implementation of this Chat application is done using Web Sockets development technique.
- - For End-to-end Encryption, I have made use of the [Signal Protocol](https://github.com/signalapp/libsignal-protocol-javascript) at the client side. Refer the link mentioned below for the Client Application.
+ - For End-to-end Encryption (E2EE), I have made use of the [Signal Protocol](https://github.com/signalapp/libsignal-protocol-javascript) at the client side. 
+ - Refer [this](https://github.com/abhaykumar1415/realtime_chat_react) link for downloading the Client Application.
+
+### Note: This application is completely for experimental purpose. Since E2EE is not yet applicable on browsers, I have used local storage of clients for storing the respective encrypted messages and prekey bundles.
 
 ## Technology Stack
  - NodeJS
  - Express
  - TypeScript
- - MongoDB
+ - MongoDB (Setup can also be done using docker - optional)
  - Web Sockets
+
+## Steps for SetUp
+- Download the frontend from my [react-chat-app](https://github.com/VertikaJain/react-chat-app) OR [realtime_chat_react](https://github.com/abhaykumar1415/realtime_chat_react)
+- Run the frontend using -
+``` 
+npm start 
+```
+- Download this repo (backend/server) and run the following commands in terminal -
+```
+npm install
+npm run build
+npm run seed
+nodemon start
+```
+
+### It is important to follow the above commands as the application won't work without the dependencies and the database setup.
+Also, the seed.js script enables you to setup the database automatically. Alternate option is to create the Database manually for experimental purpose.
 
 ## Web Sockets (Push Server) as a Service
  - HTTP protocol upgrade to websocket (101 status code)
