@@ -3,7 +3,7 @@
  - For End-to-end Encryption (E2EE), I have made use of the [Signal Protocol](https://github.com/signalapp/libsignal-protocol-javascript) at the client side. 
  - Refer [this](https://github.com/abhaykumar1415/realtime_chat_react) link for downloading the Client Application.
 
-#### Note: This application is completely for experimental purpose. Since E2EE is not yet applicable on browsers, I have used local storage of clients for storing the respective decrypted messages and prekey bundles. Also, the flow of encrypted messages can be seen in the Browser's console-> Network->Filter WS-> Header & messages. 
+**Please Note:** This application is completely for experimental purpose. Since E2EE is not yet applicable on browsers, I have used local storage of clients for storing the respective decrypted messages and prekey bundles. Also, the flow of encrypted messages can be seen in the Browser's console-> Network->Filter WS-> Header & messages. 
 
 ## Technology Stack
  - NodeJS
